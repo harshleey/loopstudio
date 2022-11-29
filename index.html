@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+  <link rel="stylesheet" href="css/index.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav">
+      <img src="./images/logo.svg" alt="" class="logo" >
+
+      <div class="menu-box" id="menu">
+        <div class="right-links dropdown-bar">
+          <img src="./images/logo.svg" alt="" class="logo">
+
+          <img src="./images/icon-close.svg" alt="" class="close-btn" onclick="closeMenu()">
+        </div>
+
+        <div class="menu-links">
+          <a href="#">About</a>
+          <a href="#">Careers</a>
+          <a href="#">Events</a>
+          <a href="#">Products</a>
+          <a href="#">Support</a>
+        </div>
+      </div>
+
+      <img src="./images/icon-hamburger.svg" alt="" class="bar-icon" onclick="openMenu()">
+
+      <div class="desktop-menu-links">
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Events</a>
+        <a href="#">Products</a>
+        <a href="#">Support</a>
+      </div>
+    </nav>
+
+    <h1 class="heading">Immersive experiences that deliver</h1>
+
+  </header>
+
+  <section class="vr-section">
+    <img src="./images/mobile/image-interactive.jpg" alt="" class="mobile-img vr-mobile-img">
+    <img src="./images/desktop/image-interactive.jpg" alt="" class="desktop-img vr-desktop-img">
+
+    <div class="vr-details">
+      <h2>The leader in interactive VR</h2>
+
+      <p>Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind 
+        to their brand.</p>
+    </div>
+
+  </section>
+
+  <section class="creations-section">
+    <h2 class="creation-heading">Our creations</h2>
+
+    <div class="creation-grid">
+      <div class="grid earth">
+        <h4>Deep earth</h4>
+        <img src="./images/mobile/image-deep-earth.jpg" alt="" class="mobile-img">
+        <img src="./images/desktop/image-deep-earth.jpg" alt="" class="desktop-img">  
+      </div>
+
+      <div class="grid arcade">
+        <h4>Night arcade</h4>
+        <img src="./images/mobile/image-night-arcade.jpg" alt="" class="mobile-img">
+        <img src="./images/desktop/image-night-arcade.jpg" alt="" class="desktop-img">
+      </div>
+
+      <div class="grid soccer">
+        <h4>Soccer team VR</h4>
+        <img src="./images/mobile/image-soccer-team.jpg" alt="" class="mobile-img">
+        <img src="./images/desktop/image-soccer-team.jpg" alt="" class="desktop-img">
+      </div>
+
+      <div class="grid the-grid">
+        <h4>The grid</h4>
+        <img src="./images/mobile/image-grid.jpg" alt="" class="mobile-img">
+        <img src="./images/desktop/image-grid.jpg" alt="" class="desktop-img">
+      </div>
+      <div class="grid vr">
+        <h4>From up above VR</h4>
+        <img src="./images/mobile/image-from-above.jpg" alt="" class="mobile-img">
+        <img src="./images/desktop/image-from-above.jpg" alt="" class="desktop-img">
+      </div>
+      <div class="grid borealis">
+        <h4>Pocket borealis</h4>
+        <img src="./images/mobile/image-pocket-borealis.jpg" alt="" class="mobile-img">
+        <img src="./images/desktop/image-pocket-borealis.jpg" alt="" class="desktop-img">
+      </div>
+      <div class="grid curiosity">
+        <h4>The curiosity</h4>
+        <img src="./images/mobile/image-curiosity.jpg" alt="" class="mobile-img">
+        <img src="./images/desktop/image-curiosity.jpg" alt="" class="desktop-img">
+      </div>
+      <div class="grid fisheye">
+        <h4>Make it fisheye</h4>
+        <img src="./images/mobile/image-fisheye.jpg" alt="" class="mobile-img">
+        <img src="./images/desktop/image-fisheye.jpg" alt="" class="desktop-img">
+      </div>
+
+    </div>
+
+    <button class="btn see-all">See all</button>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="./images//logo.svg" alt="" class="footer-logo logo">
+
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Events</a>
+        <a href="#">Products</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <div class="social-links">
+        <img src="./images/icon-facebook.svg" alt="">
+        <img src="./images/icon-twitter.svg" alt="">
+        <img src="./images/icon-pinterest.svg" alt="">
+        <img src="./images/icon-instagram.svg" alt="">
+  
+      </div>
+  
+      <p>© 2021 Loopstudios. All rights reserved.</p>
+    </div>
+    
+
+    
+
+  </footer>
+
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
