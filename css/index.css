@@ -147,18 +147,29 @@ button {
 }
 .creations-section .btn {
   text-align: center;
-  padding: 1em 2em;
+  padding: 0.8em 2em;
   width: 40%;
   margin: 2.5rem auto;
   border: 1px solid hsl(0deg, 0%, 0%);
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.3em;
   cursor: pointer;
+  transition: all 400ms linear;
+}
+.creations-section .btn:hover {
+  background-color: hsl(0deg, 0%, 0%);
+  color: hsl(0deg, 0%, 100%);
+}
+.creations-section .desktop-btn {
+  display: none;
 }
 .creations-section .creation-grid .grid {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.7em;
   position: relative;
   z-index: -10;
+  background-color: hsl(0deg, 0%, 55%);
+  opacity: 0.8;
+  cursor: pointer;
 }
 .creations-section .creation-grid .grid img {
   width: 100%;
@@ -206,7 +217,7 @@ button {
 
 @media screen and (min-width: 700px) {
   .header {
-    background: url(/loopstudios-landing-page-main/images/desktop/image-hero.jpg) no-repeat center;
+    background: url(../images/desktop/image-hero.jpg) no-repeat center;
     background-size: cover;
     padding: 2em 10%;
   }
@@ -245,9 +256,6 @@ button {
     margin-right: 1.5em;
     transition: all 300ms linear;
   }
-  .desktop-menu-links a:hover {
-    color: hsl(0deg, 0%, 41%);
-  }
   .vr-section {
     width: 85%;
     margin: 0 auto;
@@ -259,6 +267,22 @@ button {
     object-fit: cover;
     height: 70%;
   }
+  @-webkit-keyframes fade {
+    from {
+      top: 0px;
+    }
+    to {
+      top: 15%;
+    }
+  }
+  @keyframes fade {
+    from {
+      top: 0px;
+    }
+    to {
+      top: 15%;
+    }
+  }
   .vr-section .vr-details {
     position: absolute;
     background-color: hsl(0deg, 0%, 100%);
@@ -267,10 +291,31 @@ button {
     right: 0;
     padding: 5% 8%;
     text-align: left;
+    -webkit-animation: bounce 5s infinite;
+    animation: bounce 5s infinite;
   }
   .creations-section {
     width: 85%;
     margin: 0 auto;
+  }
+  .creations-section h2 {
+    margin: 0;
+  }
+  .creations-section .creation-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+  }
+  .creations-section .btn {
+    width: 20%;
+  }
+  .creations-section .desktop-btn {
+    margin: 0;
+    display: inline-block;
+  }
+  .creations-section .mobile-btn {
+    display: none;
   }
   .creations-section .creation-grid {
     display: flex;
