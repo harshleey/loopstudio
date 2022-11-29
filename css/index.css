@@ -35,6 +35,10 @@ a {
   color: hsl(0deg, 0%, 100%);
 }
 
+a:hover {
+  color: hsl(0deg, 0%, 55%);
+}
+
 button {
   background: none;
 }
@@ -169,7 +173,6 @@ button {
   z-index: -10;
   background-color: hsl(0deg, 0%, 55%);
   opacity: 0.8;
-  cursor: pointer;
 }
 .creations-section .creation-grid .grid img {
   width: 100%;
@@ -182,6 +185,9 @@ button {
   color: hsl(0deg, 0%, 100%);
   font-size: 1.5rem;
   width: 30%;
+}
+.creations-section .creation-grid .grid:hover {
+  cursor: pointer;
 }
 
 .footer {
@@ -262,26 +268,45 @@ button {
     display: flex;
     position: relative;
   }
+  @-webkit-keyframes bounce {
+    from {
+      top: 0px;
+    }
+    to {
+      top: 15%;
+    }
+  }
+  @keyframes bounce {
+    from {
+      top: 0px;
+    }
+    to {
+      top: 15%;
+    }
+  }
+  @-webkit-keyframes reverse-bounce {
+    from {
+      bottom: 0px;
+    }
+    to {
+      bottom: 5%;
+    }
+  }
+  @keyframes reverse-bounce {
+    from {
+      bottom: 0px;
+    }
+    to {
+      bottom: 5%;
+    }
+  }
   .vr-section .vr-desktop-img {
     width: 70%;
     object-fit: cover;
     height: 70%;
-  }
-  @-webkit-keyframes fade {
-    from {
-      top: 0px;
-    }
-    to {
-      top: 15%;
-    }
-  }
-  @keyframes fade {
-    from {
-      top: 0px;
-    }
-    to {
-      top: 15%;
-    }
+    position: relative;
+    -webkit-animation: reverse-bounce 5s infinite;
+    animation: reverse-bounce 5s infinite;
   }
   .vr-section .vr-details {
     position: absolute;
@@ -332,7 +357,7 @@ button {
     text-align: left;
     align-items: center;
     justify-content: space-between;
-    padding: 2em 3em;
+    padding: 2em 10%;
     margin: 0;
   }
   .footer .footer-logo {

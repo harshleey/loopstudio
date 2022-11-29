@@ -42,6 +42,10 @@ a {
     color: $white;
 }
 
+a:hover {
+    color: $primary;
+}
+
 
 button {
     background: none;
@@ -198,8 +202,6 @@ button {
             z-index: -10;
             background-color: $primary;
             opacity: .8;
-            cursor: pointer;
-
     
             img {
                 width : 100%;
@@ -214,6 +216,10 @@ button {
                 font-size: 1.5rem;
                 width: 30%;
             }
+        }
+
+        .grid:hover {
+            cursor: pointer;
         }
     }
     
@@ -321,12 +327,6 @@ button {
         display: flex;
         position: relative;
 
-        .vr-desktop-img {
-            width: 70%;
-            object-fit: cover;
-            height: 70%;
-        }
-
         @mixin keyframes($animation-name) {
             @-webkit-keyframes #{$animation-name} {
               @content;
@@ -341,7 +341,7 @@ button {
             animation: #{$str};
           }
           
-          @include keyframes(fade) {
+          @include keyframes(bounce) {
             from {
               top: 0px;
             }
@@ -349,6 +349,23 @@ button {
               top: 15%;
             }
           }
+
+          @include keyframes(reverse-bounce) {
+            from {
+              bottom: 0px;
+            }
+            to {
+              bottom: 5%;
+            }
+          }
+
+          .vr-desktop-img {
+            width: 70%;
+            object-fit: cover;
+            height: 70%;
+            position: relative;
+            @include animation('reverse-bounce 5s infinite');
+        }
 
         .vr-details {
             position: absolute;
@@ -421,7 +438,7 @@ button {
         text-align: left;
         align-items: center;
         justify-content: space-between;
-        padding: 2em 3em;
+        padding: 2em 10%;
         margin: 0;
 
         .footer-logo {
